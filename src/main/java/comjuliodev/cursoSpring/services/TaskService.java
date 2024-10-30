@@ -36,7 +36,7 @@ public class TaskService {
 
     public Task update(Task obj) {
         Task newObj = findById(obj.getId());
-        newObj.setDescription(obj);
+        newObj.setDescription(obj.getDescription());
         return this.taskRepository.save(newObj);
     }
 
